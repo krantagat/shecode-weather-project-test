@@ -1,3 +1,9 @@
+body {
+  margin: 30px 200px 130px 200px;
+}
+.container {
+  padding: 0;
+}
 h4 {
   text-align: center;
 }
@@ -36,6 +42,11 @@ h4 {
 
 .card-emoji {
   font-size: 40px;
+}
+
+.btn-current-location {
+  padding-left: 4px;
+  padding-right: 1px;
 }
 
 .suntime {
