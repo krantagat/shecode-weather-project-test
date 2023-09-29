@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/ad2642f3cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <title>Homework:JS data types</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-5 currentDateTime">
+                <span id="current-date">"Sunday 4th June 2023 "</span>
+                <span id="current-time">"23:15"</span>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="search-city"
+                    placeholder="Which city"
+                    autofocus
+                  />
+                </div>
+              </div>
+              <div class="col-1">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="search-button"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="col-2">
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  id="current-location-button"
+                >
+                  Current location
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-4">
+              <span class="maincity" id="main-city"> Bangkok</span>
+            </div>
+            <div class="col-2">
+              <span class="maincity" id="main-temp"> 32</span
+              ><span class="unit"
+                ><a href="#" id="celsius">°C</a> |
+                <a href="#" id="fahrenheit">°F</a></span
+              >
+            </div>
+
+            <div class="col-2 mainemoji">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div class="col">
+              <p class="mainrealfeel" id="main-realfeel">
+                RealFeel 36°C<br />
+                Wind: 2 km/h<br />
+                Humidity: 28%
+              </p>
+            </div>
+
+            <div class="col">
+              <p class="suntime" id="main-suntime">
+                Time Zone: UTC+7<br />
+                Sunrise: 05h49<br />
+                Sunset: 18h43
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-date">
+                    Monday<br />
+                    5th June 2023
+                  </p>
+                  <h4 class="card-title">38°C</h4>
+                  <p class="card-text">
+                    RealFeel 42°C<br />
+                    Wind 2km/h<br />
+                    Humidity:28%
+                  </p>
+                  <p class="card-emoji">
+                    <i class="fa-solid fa-fire"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-date">
+                    Tuesday<br />
+                    6th June 2023
+                  </p>
+                  <h4 class="card-title">32°C</h4>
+                  <p class="card-text">
+                    RealFeel 28°C<br />
+                    Wind 6km/h<br />
+                    Humidity:44%
+                  </p>
+                  <p class="card-emoji">
+                    <i class="fa-solid fa-cloud-rain"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-date">
+                    Wednesday<br />
+                    7th June 2023
+                  </p>
+                  <h4 class="card-title">28°C</h4>
+                  <p class="card-text">
+                    RealFeel 32°C<br />
+                    Wind 1km/h<br />
+                    Humidity:28%
+                  </p>
+                  <p class="card-emoji">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-date">
+                    Thursday<br />
+                    8th June 2023
+                  </p>
+                  <h4 class="card-title">15°C</h4>
+                  <p class="card-text">
+                    RealFeel 12°C<br />
+                    Wind 20km/h<br />
+                    Humidity:68%
+                  </p>
+                  <p class="card-emoji">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-date">
+                    Friday<br />
+                    9th June 2023
+                  </p>
+                  <h4 class="card-title">2°C</h4>
+                  <p class="card-text">
+                    RealFeel -4°C<br />
+                    Wind 22km/h<br />
+                    Humidity:80%
+                  </p>
+                  <p class="card-emoji">
+                    <i class="fa-solid fa-snowflake"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
